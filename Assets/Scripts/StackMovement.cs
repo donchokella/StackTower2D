@@ -6,7 +6,7 @@ public class StackMovement : MonoBehaviour
 {
     public float stackSpeed;
     bool isLeft;
-    public static float stackStartPosX = -150f;
+    public static float stackStartPosX = -50f;
 
     private void Start()
     {
@@ -17,7 +17,10 @@ public class StackMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Movement();
+        if (!GameManager.gameOver)
+        {
+            Movement();
+        }
     }
 
     void Movement()

@@ -14,7 +14,10 @@ public class Click : MonoBehaviour
 
     private void Update()
     {
-        InstantiateStationaryStack();
+        if (!GameManager.gameOver)
+        {
+            InstantiateStationaryStack();
+        }
     }
 
     void InstantiateStationaryStack()
@@ -27,6 +30,11 @@ public class Click : MonoBehaviour
             diffAbs = Mathf.Abs(diff);
             newStackLength = transform.localScale.x - diffAbs;
             Debug.Log(newStackLength);
+
+            if (newStackLength <= 0)
+            {
+                GameManager.gameOver = true;
+            }
 
             newStackPosX = transform.position.x - diff / 2;
 
