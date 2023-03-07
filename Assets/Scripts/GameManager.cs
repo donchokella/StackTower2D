@@ -8,15 +8,14 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         RestartWithRKey();
+
     }
     public void RestartWithRKey()
     {
         if (Input.GetKeyDown("r"))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-
         }
     }
-
-
+        
 }

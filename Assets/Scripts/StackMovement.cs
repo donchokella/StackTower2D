@@ -6,20 +6,20 @@ public class StackMovement : MonoBehaviour
 {
     public float stackSpeed;
     bool isLeft;
-    float stackStartPosX = -150f;
-    
+    public static float stackStartPosX = -150f;
 
     private void Start()
     {
         isLeft = false;
 
-        
         transform.position = new Vector2(stackStartPosX, transform.position.y);
     }
+
     private void FixedUpdate()
     {
         Movement();
     }
+
     void Movement()
     {
         transform.position = new Vector2(transform.position.x + stackSpeed * Time.fixedDeltaTime, transform.position.y);
@@ -33,7 +33,6 @@ public class StackMovement : MonoBehaviour
         {
             isLeft = false;
             stackSpeed *= -1;
-
         }
     }
 }

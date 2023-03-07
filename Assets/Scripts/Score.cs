@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
 public class Score : MonoBehaviour
 {
     public GameObject stack;
-
     float scoreVal;
-
     public Text scoreText;
 
     private void Start()
@@ -17,16 +14,13 @@ public class Score : MonoBehaviour
         scoreVal = 0;
         scoreText.GetComponent<Text>();
         scoreText.text = scoreVal.ToString();
-
     }
-
 
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
         {
             Scored();
-
         }
     }
 
@@ -35,7 +29,4 @@ public class Score : MonoBehaviour
         scoreVal = stack.gameObject.transform.position.y / 5;
         scoreText.text = scoreVal.ToString();
     }
-
-
-
 }
