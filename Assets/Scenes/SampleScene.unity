@@ -159,6 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stackPrefab: {fileID: 3044816234364927069, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+  scoreSound: {fileID: 8300000, guid: 4bd76bfcbf2ce8948b080ed9b0b91b41, type: 3}
+  gameOverSound: {fileID: 8300000, guid: 05c2018c6d444554faf2e2aa3bc139f1, type: 3}
 --- !u!114 &329114093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -294,7 +296,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 32486d8f4cc530c4fa4d5553271eb54a, type: 2}
+  - {fileID: 2100000, guid: 28f3abc7f46ba9149b16b455deb1ba83, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -316,7 +318,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8705883, g: 0.34901962, b: 0.015686275, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -339,7 +341,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &381941867
 BoxCollider2D:
@@ -404,7 +406,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.9803922, g: 0.6392157, b: 0.027450982, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -628,7 +630,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1525922885
 GameObject:
@@ -784,7 +786,7 @@ RectTransform:
   - {fileID: 1163685621}
   - {fileID: 350889410}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -808,7 +810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3044816234364927070, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3044816234364927070, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
       propertyPath: m_LocalScale.x
@@ -853,6 +855,34 @@ PrefabInstance:
     - target: {fileID: 3044816234364927070, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044816234364927071, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.023529414
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044816234364927071, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.54901963
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044816234364927071, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_Color.r
+      value: 0.9568628
+      objectReference: {fileID: 0}
+    - target: {fileID: 3044816234364927071, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fdeefb07cffa4d040aab8a99671a4bdd, type: 2}
+    - target: {fileID: 7272802516704954271, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272802516704954271, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_SpriteTilingProperty.border.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7272802516704954271, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dee05bf81f46aac4fa410860e444a1ae, type: 3}

@@ -27,12 +27,12 @@ public class StackMovement : MonoBehaviour
     {
         transform.position = new Vector2(transform.position.x + stackSpeed * Time.fixedDeltaTime, transform.position.y);
 
-        if (transform.position.x > 150)
+        if (transform.position.x > -stackStartPosX)
         {
             isLeft = true;
             stackSpeed *= -1;
         }
-        else if (transform.position.x < -150)
+        else if (transform.position.x < stackStartPosX)
         {
             isLeft = false;
             stackSpeed *= -1;

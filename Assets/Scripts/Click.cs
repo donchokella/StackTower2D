@@ -46,9 +46,14 @@ public class Click : MonoBehaviour
 
             newStackPosX = transform.position.x - diff / 2;
 
-            GameObject newPrefab = Instantiate(stackPrefab, new Vector3(newStackPosX, transform.position.y, transform.position.z), Quaternion.identity);
+            if (newStackLength > 0)
+            {
+                GameObject newPrefab = Instantiate(stackPrefab, new Vector3(newStackPosX, transform.position.y, transform.position.z), Quaternion.identity);
 
-            newPrefab.transform.localScale = new Vector3(newStackLength, transform.localScale.y, transform.localScale.z);
+                newPrefab.transform.localScale = new Vector3(newStackLength, transform.localScale.y, transform.localScale.z);
+            }
+
+
 
             transform.position = new Vector3(StackMovement.stackStartPosX, posYNew, transform.position.z);
             transform.localScale = new Vector3(newStackLength, transform.localScale.y, transform.localScale.z);
