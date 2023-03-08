@@ -35,5 +35,4 @@ public class GameManager : MonoBehaviour
         Debug.Log("GameOver");
         gameOverText.SetActive(true);
     }
-
 }

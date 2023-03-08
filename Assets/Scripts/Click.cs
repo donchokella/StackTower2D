@@ -12,6 +12,10 @@ public class Click : MonoBehaviour
     float newStackLength; // The stackPrefab should instantiate the length of the stack minus diffAbs
     float newStackPosX; // This is for the side where we want to instantiate the new stack
 
+    public AudioClip scoreSound;
+    public AudioClip gameOverSound;
+
+
     private void Update()
     {
         if (!GameManager.gameOver)
@@ -33,6 +37,10 @@ public class Click : MonoBehaviour
 
             if (newStackLength <= 0)
             {
+                if (!GameManager.gameOver)
+                {
+                    AudioSource.PlayClipAtPoint(gameOverSound, transform.position);
+                }
                 GameManager.gameOver = true;
             }
 
@@ -46,6 +54,10 @@ public class Click : MonoBehaviour
             transform.localScale = new Vector3(newStackLength, transform.localScale.y, transform.localScale.z);
 
             xPrevious = newStackPosX;
+            if (!GameManager.gameOver)
+            {
+                AudioSource.PlayClipAtPoint(scoreSound, transform.position);
+            }
         }
     }
 }
